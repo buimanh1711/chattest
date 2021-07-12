@@ -1,0 +1,131 @@
+#chat-page {
+  height: 100%;
+  display: flex;
+  .chat-page-container {
+    flex-grow: 1;
+    position: relative;
+    margin: 16px;
+    height: calc(100% - 32px);
+    box-sizing: border-box;
+    border-radius: 16px;
+    border-bottom-right-radius: 4px;
+    .Navbar-title {
+      font-weight: bold;
+    }
+  }
+  .news-sider {
+    width: 400px;
+    .side-body-wrapper {
+      position: relative;
+      border-right: 1px solid rgb(240, 240, 240);
+
+      .side-title {
+        text-align: center !important;
+        margin: 0px 8px;
+        z-index: 10;
+        position: absolute;
+        display: block;
+        width: calc(100% - 16px);
+        top: 0;
+        left: 0;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 43px;
+        background-color: white;
+        border-bottom: 1px solid rgb(240, 240, 240);
+      }
+    }
+    .news-list-container {
+      height: calc(100vh - 64px - 42px);
+      overflow-y: scroll;
+      overflow-x: hidden;
+      padding: 0px 8px;
+      padding-top: 45px;
+      box-sizing: border-box;
+    }
+    .news-item-wrapper {
+      padding: 8px 12px 12px;
+      border-bottom: 1px solid rgb(238, 238, 238);
+      .news-title {
+        a {
+          font-weight: bold;
+          font-size: 16px;
+          color: rgb(41, 41, 41);
+        }
+        a:hover {
+          color: var(--my-blue);
+        }
+      }
+      .news-content {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 8px;
+      }
+      a.img-link {
+        width: 120px;
+        display: block;
+        flex-shrink: 0;
+        .img-wrapper {
+          position: relative;
+          padding-top: 80%;
+          width: 100%;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .short-description {
+        margin-left: 12px;
+        p {
+          -webkit-line-clamp: 3;
+          font-weight: 500;
+          font-size: 15px;
+          margin-bottom: 0;
+        }
+        .interact {
+          margin-top: 4px;
+          display: flex;
+          opacity: 0.6;
+          span {
+            margin-left: 2px;
+          }
+          .comment {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 991.98px) {
+  .S--wide .ChatWrapper {
+    border-radius: 0px !important;
+  }
+  #chat-page {
+    .chat-page-container {
+      margin: 0;
+      height: calc(100%);
+    }
+    .news-sider {
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 575.98px) {
+}
+@media (max-width: 479.98px) {
+}
